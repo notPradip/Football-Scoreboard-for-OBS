@@ -41,11 +41,9 @@
           $teamA = sec(($teamA));
           $teamB = sec(($teamB));
           $teamAscore = sec(($teamAscore));
-          $teamBscore = sec($teamBscore));
+          $teamBscore = sec(($teamBscore));
 
         
-
-
           // Set Session email into a var
                $uemail = $_SESSION["email"];
               // update

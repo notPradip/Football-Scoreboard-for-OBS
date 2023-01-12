@@ -1,7 +1,6 @@
 <?php
             session_start();
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +25,7 @@
             <?php 
 // Check Login
 include 'config.php';
-//include 'function.php';
+include 'function.php';
   
         if($_SERVER["REQUEST_METHOD"] == "POST"){
     // above checked the request method to be post

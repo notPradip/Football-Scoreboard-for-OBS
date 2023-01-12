@@ -1,3 +1,0 @@
-# Football-Scoreboard-for-OBS
-Football Scoreboard for OBS is a user-friendly tool that allows OBS Studio users to easily display and update live football game scores. With a simple interface, you can quickly and easily add the scores to your live stream or recording, providing your viewers with real-time information. Whether you're streaming a local football game or a big league match, this tool will help you keep your viewers informed and engaged. <br>
-If you're looking for the quick solution, you can use our live website and get started right now! <a href="https://techsanjal.com/tools/score/">Use Live App</a>

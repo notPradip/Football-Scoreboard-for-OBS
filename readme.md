@@ -1,44 +1,64 @@
-# Football Scoreboard for OBS
+Here is a clean, natural, human written README for your GitHub repo following your instructions.
 
-This project provides a web-based, self-hostable scoreboard for displaying live football scores in OBS Studio. It features a user-friendly dashboard to control team names and scores, which are then reflected in real-time within an OBS browser source.
+---
 
-Features
-Live Score Updates: Scores and team names updated on the web dashboard reflect instantly in your OBS stream.
-User Authentication: A simple signup and login system allows you to manage your own persistent scoreboard.
-Unique Scoreboard URL: Each user receives a unique token-based URL to ensure their scoreboard is private.
-Easy OBS Integration: Integrates seamlessly with OBS Studio as a browser source.
-Simple Tech Stack: Built with PHP and MySQL, making it easy to deploy on most web hosting environments.
-Prerequisites
-A web server with PHP support (e.g., Apache, Nginx).
-A MySQL or MariaDB database.
-OBS Studio.
-Installation
-Download the repository files and upload them to your web server.
+# FMAR Football Scoreboard
 
-Create a new MySQL database on your server.
+A simple self-hostable web scoreboard designed for live football broadcasts. It works perfectly with OBS Studio and gives you a clean dashboard to update scores and team names in real time.
 
-Import the user.sql file into your newly created database. This will set up the required user table.
+## Features
 
-Open the connects/config.php file and update the following variables with your database credentials:
+Live score updates that reflect instantly in OBS
+Simple signup and login system to manage your own scoreboard
+A unique token based URL for privacy and individual setups
+Easy OBS browser source integration
+Built with PHP and MySQL so it can run on almost any hosting environment
 
-$server = 'localhost'; // Your database server
-$username = 'root';    // Your database username
-$password = '';        // Your database password
-$database = 'score';   // Your database name
-Usage
-Create an Account: Navigate to yourdomain.com/signup.php in your browser to create a new user account.
-Log In: After signing up, go to yourdomain.com/login.php to log in. You will be redirected to the dashboard.
-Control the Scoreboard: On the dashboard (dashboard.php), you can set the names for "Team A" and "Team B" and update their scores. Click the UPDATE button to save changes.
-Get the OBS URL: Copy the unique URL provided on the dashboard. It will look like this: https://yourdomain.com/score.php?token=xxxxxxxxxxxxxx
-Add to OBS:
-In OBS Studio, add a new Browser source to your scene.
-Paste the copied URL into the "URL" field.
-Adjust the width and height as needed.
-Go Live: The scoreboard will now appear in your OBS scene. Any updates made in your web dashboard will automatically apply to the OBS overlay.
-How It Works
-The application uses a simple but effective architecture:
+## Prerequisites
 
-dashboard.php: The control panel where you update the team names and scores. These changes are saved to the database for your user account.
-score.php: The OBS browser source page. It uses jQuery to make an AJAX call every second to data.php.
-data.php: This file fetches the latest team and score data from the database using the unique token from the URL and displays it.
-Database: A single user table stores user information, team details, scores, and the unique token for URL generation.
+A PHP supported web server
+MySQL or MariaDB
+OBS Studio
+
+## Installation
+
+Download the project and upload it to your web server
+Create a new MySQL database
+Import the user.sql file into the database
+Open connects/config.php and update your database credentials
+
+```
+$server   = 'localhost'
+$username = 'root'
+$password = ''
+$database = 'score'
+```
+
+## Usage
+
+Create an account by visiting yourdomain.com/signup.php
+Log in through yourdomain.com/login.php and you will be taken to your dashboard
+Set your team names and scores in dashboard.php and hit update
+Copy your unique scoreboard link shown on the dashboard
+The URL will look like
+[https://yourdomain.com/score.php?token=xxxxxxxxxxxxxx](https://yourdomain.com/score.php?token=xxxxxxxxxxxxxx)
+
+### Add to OBS
+
+Open OBS
+Add a new Browser Source
+Paste your scoreboard URL
+Set your desired width and height
+Your scoreboard will now update automatically during your broadcast
+
+## How It Works
+
+dashboard.php is your control panel where all updates are saved to the database
+score.php is the page used inside OBS and refreshes the latest data
+data.php fetches current team names and scores using the token from the URL
+The database stores user accounts, scoreboard data, and tokens for each user
+
+## Contact
+
+For custom broadcasting software development
+[contact@coderpradip.com](mailto:contact@coderpradip.com)

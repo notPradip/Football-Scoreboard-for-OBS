@@ -1,8 +1,6 @@
-Here is a clean, natural, human written README for your GitHub repo following your instructions.
 
----
 
-# FMAR Football Scoreboard
+# Simple Football Scoreboard built on PHP
 
 A simple self-hostable web scoreboard designed for live football broadcasts. It works perfectly with OBS Studio and gives you a clean dashboard to update scores and team names in real time.
 
